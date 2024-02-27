@@ -1,0 +1,143 @@
+
+
+html{
+  
+  --dodger-blue-50: #eef8ff;
+  --dodger-blue-100: #d9eeff;
+  --dodger-blue-200: #bce1ff;
+  --dodger-blue-300: #8ed0ff;
+  --dodger-blue-400: #59b4ff;
+  --dodger-blue-500: #268dff;
+  --dodger-blue-600: #1b74f5;
+  --dodger-blue-700: #145de1;
+  --dodger-blue-800: #174bb6;
+  --dodger-blue-900: #19428f;
+  --dodger-blue-950: #142957;
+  
+
+--bs-body-bg: #212529;
+
+}
+
+body {
+  background-image: linear-gradient(var(--dodger-blue-700), var(--dodger-blue-950));
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+   height: 100vh;
+  color: var(--dodger-blue-100);
+  
+}
+
+section{
+  color: var(--dodger-blue-100);
+  background-color: var(--bs-body-bg);
+  position: absolute;
+  display: grid;
+  top: 0;
+  inset: 0;
+  font-size: 48px;
+  
+  place-content:center;
+}
+
+strong{
+  font-size: 25px;
+  padding-top: 20px;
+  text-align: center;
+  
+  
+}
+
+canvas{
+  
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border: 2px var(--dodger-blue-100) solid;
+  
+}
+
+.grilla{
+
+  padding-top: 10px;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 200px;
+  align-content: center;
+
+  
+}
+.h1Start{
+  
+  font-size: 120px;
+  text-align: center;
+  
+  letter-spacing: 20px;
+  font-weight: bold;
+  
+}
+
+h1{
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 10px;
+  
+}
+
+
+
+button{
+  
+  
+  text-align: center;
+  
+  background-image: linear-gradient(to left top, var(--dodger-blue-400), var(--dodger-blue-600));
+  
+  letter-spacing: 1px;
+}
+#pauseBtn{
+  background-image: linear-gradient(to left top, var(--dodger-blue-400), var(--dodger-blue-600));
+  
+  display: inline-block;
+  margin-left: auto;
+  margin-top: 12px;
+  margin-right: 20px;
+ 
+}
+#muteBtn{
+  background-image: linear-gradient(to left top, var(--dodger-blue-400), var(--dodger-blue-600));
+  
+  display: inline-block;
+  
+  margin-top: 12px;
+  margin-right: 20px;
+  
+}
+#pauseBtn:hover{
+  background-image: linear-gradient(to left top, var(--dodger-blue-500), var(--dodger-blue-700));
+}
+#muteBtn:hover{
+  background-image: linear-gradient(to left top, var(--dodger-blue-500), var(--dodger-blue-700));
+}
+button:hover{
+  background-image: linear-gradient(to left top, var(--dodger-blue-500), var(--dodger-blue-700));
+}
+button:active{
+  background-image: linear-gradient(to left top, var(--dodger-blue-600), var(--dodger-blue-800));
+}
+header{
+  
+  
+  display: flex;
+}
+form{
+  
+  width: 30%;
+  margin: 0 auto;
+ 
+}

@@ -68,19 +68,13 @@ canvas.height = BLOCK_SIZE * BOARD_HEIGHT
 
 context.scale(BLOCK_SIZE, BLOCK_SIZE)
 
-//4 player piece
+
 const piece = {
   position: { x: 5, y: 5 },
   shape: [[1, 1], [1, 1]]
 }
 
-//2 game loop
 
-/*function update(){
-  draw()
-  //ejecuta una funcion en cada frame
-  window.requestAnimationFrame(update)
-}*/
 
 const PIECES = 
 [
@@ -105,7 +99,7 @@ const PIECES =
     [1, 1]
   ]
 ]
-//8 autoDrop
+
 let dropCounter = 0
 let lastTime = 0
 
@@ -211,7 +205,7 @@ document.addEventListener('keydown', event => {
       rotated.push(row)
     }
 
-    //evitar que rote si hay colision
+    
     const previousShape = piece.shape
     piece.shape = rotated
     if(checkCollision()){
@@ -267,10 +261,10 @@ function solidifyPiece(){
     })
   })
 
-  //get random piece
+ 
   piece.shape = PIECES[Math.floor(Math.random() * PIECES.length)]
 
-  //reset position
+ 
   piece.position.x= Math.floor(BOARD_WIDTH/2-2)
   piece.position.y=0
 
@@ -354,10 +348,6 @@ startBtn.addEventListener('click', () => {
   audio.loop= true
   audio.volume = 0.5
   audio.play()
-   
-      
-    
-
 })
 
 sectionBtn.addEventListener('click', () => {
@@ -365,7 +355,8 @@ sectionBtn.addEventListener('click', () => {
     score= 0
     const divApp = document.getElementById('app')
     divApp.appendChild(startSec)
-})
+  
+  })
 
 
 
@@ -397,10 +388,7 @@ form.addEventListener('submit', (e) => {
     window.alert('el nombre no puede superar los 12 caracteres')
     return
   }
-  /*if(window.localStorage.getItem('name')===inputValue){
-    window.alert('ese nombre ya esta registrado')
-    return
-  }*/
+  
   window.localStorage.setItem('name', inputValue)
   sectionHighScore.remove()
   window.location.reload()
@@ -412,15 +400,11 @@ function guardarScore(){
     
     const h1 = document.createElement('h1')
     h1.innerText= '¡Maxima puntuacion superada! Escribe tu nombre'
-    
     sectionHighScore.appendChild(h1)
     sectionHighScore.appendChild(form)
-    
     const divApp = document.getElementById('app')
     divApp.appendChild(sectionHighScore)
-   
     maxScore = score
-    
     window.localStorage.setItem('maxScore', maxScore)
   }
 }
